@@ -4,16 +4,292 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Teste de Horas</title>
+	<link rel="stylesheet" href="depois/style.css">
 </head>
 <body>
-	<p id="demo"></p>
-	<p id="dm"></p>
+	<div class="container">
+  		<div class="Tarefa">
+  			<p class="txt_Tarefa"></p>
+  		</div>
+  		<div class="Hora">
+  			<p class="txt_Hora"></p>
+  		</div>
+	</div>
 <script type="text/javascript">
 	const d = new Date();
-	let hour = d.getHours();
-	let minu = d.getMinutes();
-	document.getElementById("demo").innerHTML = hour;
-	document.getElementById("dm").innerHTML = minu;
+	let hora = d.getHours();
+	let minuto = String(d.getMinutes()).padStart(2, "0");
+	let codigoT = hora + minuto;
+	let tempo = hora + ":" + minuto;
+	document.querySelector(".txt_Hora").innerHTML = tempo;
+
+	const tarefas = [
+		"ACORDAR.",
+		"ESCOVAR DENTES.",
+		"ALONGAMENTO DE PERNAS E BRAÇOS POR 20 SEGUNDOS CADA MEMBRO.",
+		"INFINITY TRAIN.",
+		"TOMAR CAFÉ DA MANHÃ.",
+		"PERDER TEMPO.",
+		"ESCOVAR DENTES.",
+		"PERDER TEMPO.",
+		"TRABALHAR.", //8
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"MÚSICA.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"MÚSICA.",
+		"MÚSICA.",
+		"DESCANSAR.",
+		"PERDER TEMPO.",
+		"COMIDA.",
+		"FRUTA.",
+		"DORMIR",
+		"ESCOVAR DENTES.",
+		"GRAVITY FALLS OU THE OWL HOUSE.",
+		"GRAVITY FALLS OU THE OWL HOUSE.",
+		"VIDEOAULA.",
+		"VIDEOAULA.",
+		"TRABALHAR.", //14
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"MÚSICA.",
+		"MÚSICA.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"MÚSICA.",
+		"DESCANSAR.",
+		"COMIDA.",
+		"PERDER TEMPO.",
+		"GRAVITY FALLS OU THE OWL HOUSE.",
+		"GRAVITY FALLS OU THE OWL HOUSE.",
+		"ESCOVAR DENTES.",
+		"VIDEOAULA.",
+		"VIDEOAULA.",
+		"TRABALHAR.", //19
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"PODCAST.",
+		"MÚSICA.",
+		"MÚSICA.",
+		"LANCHINHO.",
+		"ESCOVAR DENTES.",
+		"PERDER TEMPO.",
+		"PERDER TEMPO.",
+		"FILME."
+	];
+
+	document.querySelector(".txt_Tarefa").innerHTML = tarefas[2];
+
+	if (hora == 6 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[0];
+	}
+
+	else if(hora == 6 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[1];
+	}
+	else if(hora == 6 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[2];
+	}
+	else if(hora == 6 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[3];
+	}
+	else if(hora == 7 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[4];
+	}
+	else if(hora == 7 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[5];
+	}
+	else if(hora == 7 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[6];
+	}
+	else if(hora == 7 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[7];
+	}
+	else if(hora == 8 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[8];
+	}
+	else if(hora == 8 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[9];
+	}
+	else if(hora == 8 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[10];
+	}
+	else if(hora == 8 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[11];
+	}
+	else if(hora == 9 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[12];
+	}
+	else if(hora == 9 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[13];
+	}
+	else if(hora == 9 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[14];
+	}
+	else if(hora == 9 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[15];
+	}
+	else if(hora == 10 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[16];
+	}
+	else if(hora == 10 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[17];
+	}
+	else if(hora == 10 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[18];
+	}
+	else if(hora == 10 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[19];
+	}
+	else if(hora == 11 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[20];
+	}
+	else if(hora == 11 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[21];
+	}
+	else if(hora == 11 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[22];
+	}
+	else if(hora == 11 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[23];
+	}
+	else if(hora == 12 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[24];
+	}
+	else if(hora == 12 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[25];
+	}
+	else if(hora == 12 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[26];
+	}
+	else if(hora == 12 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[27];
+	}
+	else if(hora == 13 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[28];
+	}
+	else if(hora == 13 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[29];
+	}
+	else if(hora == 13 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[30];
+	}
+	else if(hora == 13 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[31];
+	}
+	else if(hora == 14 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[32];
+	}
+	else if(hora == 14 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[33];
+	}
+	else if(hora == 14 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[34];
+	}
+	else if(hora == 14 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[35];
+	}
+	else if(hora == 15 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[36];
+	}
+	else if(hora == 15 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[37];
+	}
+	else if(hora == 15 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[38];
+	}
+	else if(hora == 15 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[39];
+	}
+	else if(hora == 16 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[40];
+	}
+	else if(hora == 16 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[41];
+	}
+	else if(hora == 16 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[42];
+	}
+	else if(hora == 16 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[43];
+	}
+	else if(hora == 17 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[44];
+	}
+	else if(hora == 17 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[45];
+	}
+	else if(hora == 17 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[46];
+	}
+	else if(hora == 17 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[47];
+	}
+	else if(hora == 18 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[48];
+	}
+	else if(hora == 18 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[49];
+	}
+	else if(hora == 18 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[50];
+	}
+	else if(hora == 18 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[51];
+	}
+	else if(hora == 19 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[52];
+	}
+	else if(hora == 19 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[53];
+	}
+	else if(hora == 19 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[54];
+	}
+	else if(hora == 19 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[55];
+	}
+	else if(hora == 20 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[56];
+	}
+	else if(hora == 20 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[57];
+	}
+	else if(hora == 20 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[58];
+	}
+	else if(hora == 20 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[59];
+	}
+	else if(hora == 21 && minuto < 15){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[60];
+	}
+	else if(hora == 21 && minuto < 30){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[61];
+	}
+	else if(hora == 21 && minuto < 45){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[62];
+	}
+	else if(hora == 21 && minuto <= 59){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[63];
+	}
+	else if(hora == 22){
+		document.querySelector(".txt_Tarefa").innerHTML = tarefas[64];
+	}
+	
 </script>
 </body>
 </html>
